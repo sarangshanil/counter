@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Counter</title>
+</head>
+<body>
+    <div class="d-flex flex-column align-items-center justify-content-center" style="height: 100vh;">
+        <div class="d-flex flex-column align-items-center justify-content-center">
+
+            <div class="fw-bold " id="display" style="font-size: 4rem;">0</div>
+
+            <div>
+                <button id="plus" class="btn btn-success fs-2 fw-bold mx-2">+</button>
+                <button id="minus" class="btn btn-danger fs-2 fw-bold">-</button>
+            </div>
+        </div> 
+    </div>  
+</body>
+
+<script>
+    var count = 0;
+    display = document.getElementById("display");
+
+
+    document.getElementById("plus").onclick = function(){
+        count++;
+        display.innerHTML = count;
+    }
+    document.getElementById("minus").onclick  = function(){
+        count--;
+        display.innerHTML = count;
+    }
+
+</script>
+</html>
